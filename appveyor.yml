@@ -11,7 +11,6 @@ platform:
 
 install:
   - ps: Install-Product node $env:nodejs_version
-  - git submodule update --init
   - node --version
   - npm --version
   - npm install
