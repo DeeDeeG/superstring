@@ -20,7 +20,3 @@ test_script:
   - npm run test:node
 
 build: off
-
-branches:
-  only:
-    - master
