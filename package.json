@@ -13,6 +13,8 @@
     "test:browser": "SUPERSTRING_USE_BROWSER_VERSION=1 mocha test/js/*.js",
     "test": "npm run test:node && npm run test:browser",
     "benchmark": "node benchmark/marker-index.benchmark.js",
+    "preinstall": "if ! [ -e vendor/win-iconv/.git ]; then git submodule update --init; fi",
+    "install": "node-gyp rebuild",
     "prepublishOnly": "npm run build:browser",
     "standard": "standard --recursive src test"
   },
